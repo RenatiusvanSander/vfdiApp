@@ -1,0 +1,29 @@
+<!--
+  Generated template for the VfdiTracksPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        Vfdi Tracks
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+  <ion-content padding>
+    <ion-list>
+      <button ion-item *ngFor="let vfdiTrack of vfdiTracks">
+        <ion-avatar item-left>
+          <img [src]="vfdiTrack.img">
+        </ion-avatar>
+        <h2>Voices From Deep Inside {{ vfdiTrack.id }}</h2>
+        <ion-icon name="arrow-forward" item-right></ion-icon>
+      </button>
+    </ion-list>
+  </ion-content>
