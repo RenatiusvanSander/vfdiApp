@@ -18,7 +18,7 @@
 
   <ion-content padding>
     <ion-list>
-      <button ion-item *ngFor="let vfdiTrack of vfdiTracks">
+      <button ion-item *ngFor="let vfdiTrack of vfdiTracks" (click)="goToVfdiTrack(vfdiTrack)">
         <ion-avatar item-left>
           <img [src]="vfdiTrack.img">
         </ion-avatar>

@@ -17,17 +17,21 @@
 
 
 <ion-content padding>
+  <p *ngIf="submitAttempt" style="color: #ea6153;">Please fill out.</p>
+
+  <form [formGroup]="loginForm">
   <ion-item>
     <ion-label floating>Username</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" formControlName="userName"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label floating>Password</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input type="password" formControlName="password"></ion-input>
   </ion-item>
+  </form>
   <br>
   <br>
-      <button ion-button block>
+      <button ion-button block (click)="loginUser()">
       Login</button>
 </ion-content>

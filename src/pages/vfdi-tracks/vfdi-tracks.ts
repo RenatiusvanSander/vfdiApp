@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { VfdiTrack } from '../../models/vfdi-track';
 import { VfdiTracksProvider } from '../../providers/vfdi-tracks/vfdi-tracks';
+import { VfdiTrackPage } from '../vfdi-track/vfdi-track';
 /**
  * Generated class for the VfdiTracksPage page.
  *
@@ -26,6 +27,11 @@ export class VfdiTracksPage {
       this.vfdiTracks = vfdiTracksList;
     });
   }
+
+    // load the vfdi-track details
+    goToVfdiTrack(track: VfdiTrack) {
+      this.navCtrl.push(VfdiTrackPage, {track});
+    }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad VfdiTracksPage');
